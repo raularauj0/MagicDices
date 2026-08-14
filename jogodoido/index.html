@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Ecos dos Dados — v0.5 (Classes & Bosses)</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;800&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app">
+  <h1>ECOS DOS DADOS</h1>
+  <div class="sub">v0.5 — CLASSES & BOSSES</div>
+
+  <div class="topbar">
+    <div class="level-pill" id="levelPill">Desafio 1</div>
+    <div class="class-badge" id="classBadge">⚔️ --</div>
+    <div class="lucky-badge" id="luckyBadge">🍀 Sorte: --</div>
+    <button class="icon-btn" id="helpBtn">❓</button>
+    <button class="icon-btn" id="codexBtn">📖 Codex</button>
+  </div>
+
+  <div class="bonus-bar" id="bonusBar"></div>
+
+  <div class="arena" id="arena">
+    <div class="float-layer" id="floatLayer"></div>
+    <div class="combo-streak-layer" id="comboStreakLayer"></div>
+    <div class="shield-badge" id="shieldBadge">🛡️</div>
+
+    <div class="monster-row">
+      <div class="monster-emoji" id="monsterEmoji">🐗</div>
+      <div class="monster-info">
+        <div class="monster-name" id="monsterName">Javali Sombrio</div>
+        <div class="weakness-tag" id="weaknessTag">Fraqueza: Fogo</div>
+        <div class="hp-track"><div class="hp-fill" id="hpFill"></div><div class="hp-label" id="hpLabel">120/120</div></div>
+        <div class="timer-track"><div class="timer-fill" id="timerFill"></div></div>
+        <div class="timer-label" id="timerLabel">Ataque em 7.0s</div>
+        <div class="debuff-label" id="debuffLabel"></div>
+      </div>
+    </div>
+
+    <div class="hero-row">
+      <div class="hero-emoji" id="heroEmoji">🛡️</div>
+      <div class="hero-col">
+        <div class="hero-label" id="heroLabel">Selecione dados e monte sua estratégia...</div>
+        <div class="hp-track small">
+          <div class="hp-fill hero" id="heroHpFill"></div>
+          <div class="hp-label" id="heroHpLabel">100/100</div>
+        </div>
+        <div class="xp-track">
+          <div class="xp-fill" id="xpFill"></div>
+          <div class="xp-label" id="xpLabel">Nível 1 (0/100 XP)</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="board" id="board"></div>
+
+    <div class="selection-bar" id="selectionBar">
+      <div>
+        <div class="selection-info">Soma: <span id="selSum">0</span></div>
+        <span class="combo-badge" id="comboBadge"></span>
+      </div>
+      <div class="btn-group">
+        <button class="merge-btn" id="mergeBtn" disabled>➕ Somar</button>
+        <button class="launch-btn" id="launchBtn" disabled>⚔️ Atacar</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="legend">
+    <span>🔥15 Fogo</span>
+    <span>❄️16 Gelo</span>
+    <span>⚡17 Raio</span>
+    <span>🌑18 Sombra</span>
+    <span>✨19 Luz</span>
+    <span>🃏20 Coringa</span>
+    <span>🍀 Sorte (Bônus)</span>
+  </div>
+
+<div class="overlay" id="overlay">
+  <div class="modal" id="modalBox"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
